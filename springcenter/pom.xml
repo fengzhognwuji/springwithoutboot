@@ -17,7 +17,14 @@
 		<olingo.version>2.0.4</olingo.version>
 		<eclipselink.version>2.6.2</eclipselink.version>
 		<spring.version>4.3.5.RELEASE</spring.version>
+		<hikaricp.version>2.4.6</hikaricp.version>
 		<logging.version>2.0.8</logging.version>
+		<com.h2database.version>1.4.190</com.h2database.version>
+		<com.mysql.jdbc.Driver.version>5.1.39</com.mysql.jdbc.Driver.version>
+		<hikaricp.version>2.4.6</hikaricp.version>
+		<druid-version>1.0.20</druid-version>
+		<org.eclipse.persistence.version>2.6.3</org.eclipse.persistence.version>
+		<hibernate.version>5.2.1.Final</hibernate.version>
 	</properties>
 
 	<dependencies>
@@ -84,7 +91,7 @@
 		<dependency>
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-jpa</artifactId>
-			<version>1.9.2.RELEASE</version>
+			<version>1.10.1.RELEASE</version>
 			<exclusions>
 				<exclusion>
 					<!-- We need spring-core 4.2 or later, but spring-data includes 4.1.9 -->
@@ -145,6 +152,41 @@
 			<version>1.2.17</version>
 		</dependency>
 
+
+		<!-- MySQL JDBC -->
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${com.mysql.jdbc.Driver.version}</version>
+		</dependency>
+		<!-- Embbed Memory Database for Auto-Test -->
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<version>${com.h2database.version}</version>
+		</dependency>
+		<!--Hibernate for test -->
+		<dependency>
+			<groupId>org.hibernate</groupId>
+			<artifactId>hibernate-entitymanager</artifactId>
+			<version>${hibernate.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.jboss.logging</groupId>
+			<artifactId>jboss-logging</artifactId>
+			<version>3.3.0.Final</version>
+		</dependency>
+		<!--DB Connection Pool -->
+		<dependency>
+			<groupId>com.zaxxer</groupId>
+			<artifactId>HikariCP</artifactId>
+			<version>${hikaricp.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>${druid-version}</version>
+		</dependency>
 
 
 	</dependencies>
