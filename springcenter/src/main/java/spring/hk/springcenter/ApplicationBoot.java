@@ -25,6 +25,7 @@ public class ApplicationBoot extends AbstractAnnotationConfigDispatcherServletIn
 	protected String[] getServletMappings() {
 		return new String[] { "/*" };
 	}
+	
 
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
