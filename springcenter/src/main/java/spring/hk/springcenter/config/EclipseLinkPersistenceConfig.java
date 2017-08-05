@@ -1,12 +1,12 @@
 package spring.hk.springcenter.config;
 
 import java.util.Properties;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableLoadTimeWeaving;
 import org.springframework.context.annotation.EnableLoadTimeWeaving.AspectJWeaving;
-import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver;
 import org.springframework.instrument.classloading.LoadTimeWeaver;
@@ -17,8 +17,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @ComponentScan(basePackages = EclipseLinkPersistenceConfig.PACKAGE_NAMESPACE)
 @EnableTransactionManagement
 @EnableLoadTimeWeaving(aspectjWeaving = AspectJWeaving.ENABLED)
-@EnableJpaRepositories("com.sap.jnc.marketing.persistence.repository")
-@PropertySource(value = { "classpath:META-INF/db.properties" })
+@EnableJpaRepositories("spring.hk.springcenter.repository")
+//@PropertySource(value = { "classpath:db.properties" })
 public class EclipseLinkPersistenceConfig extends PersistenceConfig implements AutoCloseable {
 
 	private static final String PROPERTY_ECLIPSELINK_LOG = "eclipselink.logging.level.sql";
