@@ -7,6 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.EnableLoadTimeWeaving;
 import org.springframework.context.annotation.EnableLoadTimeWeaving.AspectJWeaving;
+import org.springframework.context.annotation.PropertySource;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.instrument.classloading.InstrumentationLoadTimeWeaver;
 import org.springframework.instrument.classloading.LoadTimeWeaver;
@@ -18,7 +19,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @EnableTransactionManagement
 @EnableLoadTimeWeaving(aspectjWeaving = AspectJWeaving.ENABLED)
 @EnableJpaRepositories("spring.hk.springcenter.repository")
-//@PropertySource(value = { "classpath:db.properties" })
+@PropertySource(value = { "classpath:db.properties" })
 public class EclipseLinkPersistenceConfig extends PersistenceConfig implements AutoCloseable {
 
 	private static final String PROPERTY_ECLIPSELINK_LOG = "eclipselink.logging.level.sql";

@@ -79,7 +79,7 @@ public abstract class PersistenceConfig implements AutoCloseable {
 			druidDataSource.setMaxWait(60000);
 			druidDataSource.setTimeBetweenEvictionRunsMillis(60000);
 			druidDataSource.setMinEvictableIdleTimeMillis(300000);
-			druidDataSource.setValidationQuery("SELECT * FROM DUMMY");
+//			druidDataSource.setValidationQuery("SELECT * FROM DUMMY");
 			druidDataSource.setTestWhileIdle(true);
 			druidDataSource.setTestOnBorrow(false);
 			druidDataSource.setTestOnReturn(false);
