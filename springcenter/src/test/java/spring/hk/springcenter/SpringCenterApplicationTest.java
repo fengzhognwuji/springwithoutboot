@@ -1,14 +1,12 @@
-package spring.hk.springcenter.component.config;
+package spring.hk.springcenter;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
-/**
- * @author I323691
- *
- */
 @Configuration
 @ComponentScan
-public class CompactDiscConfig {
-
+public class SpringCenterApplicationTest
+{
+    public static void main(String[] args) {
+    }
 }
